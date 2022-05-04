@@ -1,20 +1,21 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { restaurant, burger } from './screen/data'
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screen/Home/HomeScreen'
+import DetailScreen from './screen/Detail/DetailScreen';
 
-const App = () => {
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View>
-      {
-        restaurant.map((value,index) => (
-          <Text key={index}>
-          {`${value.rName} Dishes: ${value.dish[0].fName}`}
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
 
-          </Text>
-        ))
-      }
-    </View>
-  )
+        <Stack.Screen name="Detail" component={DetailScreen} options={{headerShown: false}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-export default App
+export default App;
