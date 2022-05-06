@@ -71,7 +71,7 @@ const DetailScreen = ({route, navigation}) => {
             </View>
           </View>
 
-          <TouchableOpacity style={styles.orderBtn} onPress={() => navigation.navigate('Status')}>
+          <TouchableOpacity style={styles.orderBtn} onPress={() => navigation.navigate('Status',{item: item})}>
             <Text style={styles.orderText}>Order</Text>
           </TouchableOpacity>
         </View>

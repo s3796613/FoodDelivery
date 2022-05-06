@@ -207,5 +207,38 @@ export const menuData = [
         price: 20,
         duration: "35 - 40 min",
         star: 4
+    },
+    {
+        menuId: 17,
+        categoryId: 5,
+        name: "Crispy Chicken Burger",
+        photo: IMAGES.crispy_chicken_burger,
+        description: "Premium burger with crispy chicken fillet",
+        calories: 624,
+        price: 14.99,
+        duration: "10 - 20 min",
+        star: 5
+    },
+    {
+        menuId: 18,
+        categoryId: 7,
+        name: "French Fries",
+        photo: IMAGES.baked_fries,
+        description: "French Fries",
+        calories: 360,
+        price: 5,
+        duration: "25 - 35 min",
+        star: 5
+    },
+    {
+        menuId: 19,
+        categoryId: 5,
+        name: "Honey Mustard Burger",
+        photo: IMAGES.honey_mustard_chicken_burger,
+        description: "Chicken burger with mustard sauce",
+        calories: 700,
+        price: 20,
+        duration: "35 - 40 min",
+        star: 4
     }
 ]

@@ -10,11 +10,13 @@ const HomeScreen = ({navigation}) => {
 
 
   const [choice, setChoice] = useState(1)
+  const [pressed, setPressed] = useState({backgroundColor: 'white'})
   const handleChoiceChange = value => {
     setChoice(value)
   }
   const categoryChange = (id) => {
     handleChoiceChange(id)
+    setPressed({backgroundColor: 'orange'})
   }
 
   
@@ -33,7 +35,7 @@ const HomeScreen = ({navigation}) => {
       
       {/* Categories section */}
       <View style={styles.category_container}>
-        <FlatList data={categoryData} renderItem={data => CategoryButton(data.item,categoryChange,data.item.id)} style={styles.category_container} horizontal showsHorizontalScrollIndicator={false} key={data => data.id} styles={styles.list}/>
+        <FlatList data={categoryData} renderItem={data => CategoryButton(data.item,categoryChange,data.item.id)} style={styles.category_container} horizontal showsHorizontalScrollIndicator={false} key={data => data.id}/>
       </View>
 
 
@@ -61,13 +63,14 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'Roboto-Medium',
     fontSize: SIZES.title,
-    paddingTop: 16,
+    paddingTop: 8,
     paddingLeft: 16,
     color: 'black',
   },
 
   category_container: {
     paddingHorizontal: 8,
+    marginBottom: 8
   }
 
 

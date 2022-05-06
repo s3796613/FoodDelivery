@@ -3,9 +3,9 @@ import React from 'react'
 import { ICONS } from '../../assets/Images'
 import { COLORS, SIZES, STYLES } from '../../assets/Theme'
 
-const CategoryButton = (props, onPressFunc, value) => {
+const CategoryButton = (props, onPressFunc, categoryID, isPressed) => {
   return (
-    <TouchableOpacity style={[styles.container, styles.shadowProp]} onPress={() => onPressFunc(value)}>
+    <TouchableOpacity style={[styles.container, styles.shadowProp, isPressed]} onPress={() => onPressFunc(categoryID)}>
       <View style={styles.icon_cover}>
           <Image source={props.icon} style={styles.icon}/>
       </View>
